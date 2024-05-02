@@ -11,6 +11,7 @@ $query = "select url from adreces where id='$c'";
 }
 $result = pg_query($db,$query);
 $desti = pg_fetch_row($result,0);
-echo $desti[0];
+//echo $desti[0];
+header("Location: ".$desti[0]);
 pg_close($db);
 ?>
