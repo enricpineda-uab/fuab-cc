@@ -10,12 +10,19 @@
   </head>
   <body>
     <main>
+      <div id="capsula">
         <h1>Acurtador web FUABCC</h1>
+        <p>Introdueix la URL que vulguis acurtar al camp següent:
         <form>
-            <input type="text" name="url">
-            <input type="checkbox" name="custom" id="custom" onClick="mostraCustom();"> Vols personalitzar l'adreça?
-            <div id="customField"><input type="text" name="tag" id="tag"></div>
+            <input type="text" name="url" id="url"><br />
+            <p>Pots personalitzar la teva adreça posant un sufix a continuació. Només lletres, números i guions:</p>
+            <input type="text" name="tag" id="tag"><br />
+            <p>&nbsp;</p>
+            <p><a href="#" class="boto">Enviar</a></p>
+            <p>&nbsp;</p>
+            <p class="peu">© Promoció i Comunicació de la FUAB. Podeu contactar a través del correu <a href="mailto: promocio.fuab@uab.cat">promocio.fuab@uab.cat</a></p>
         </form>  
+      </div>
     </main>
 	<script src="./script.js"></script>
   </body>
