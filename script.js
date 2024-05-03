@@ -3,8 +3,8 @@ const adresa = document.getElementById("url");
 const origen = document.getElementById("tag");
 const aAlias = document.getElementById("alertaAlias");
 const botoEnviar = document.getElementById("botoEnviar");
-const direccio = document.getElementById("url").value;
-const etiqueta = document.getElementById("tag").value;
+var direccio = document.getElementById("url").value;
+var etiqueta = document.getElementById("tag").value;
 const dadesAfegir = {"url": direccio, "alias": etiqueta, "metode": "afegir"};
 
 const inputHandler = function(e) {
