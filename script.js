@@ -9,7 +9,7 @@ const dadesAfegir = {url: direccio, alias: elalias, metode: 'afegir'};
 
 const inputHandler = function(e) {
     var elMeuRegex = /^([a-zA-Z0-9\-_])*$/;
-    var resultat = elMeuRegex.test(e.target);
+    var resultat = elMeuRegex.test(e.target.value);
     if (resultat === false) {
         aAlias.style.display="block";
         botoEnviar.disabled=true;
