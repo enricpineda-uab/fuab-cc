@@ -3,7 +3,9 @@ const adresa = document.getElementById("url");
 const origen = document.getElementById("tag");
 const aAlias = document.getElementById("alertaAlias");
 const botoEnviar = document.getElementById("botoEnviar");
-const dadesAfegir = {url: adresa.value, alias: origen.value, metode: 'afegir'};
+const direccio = adresa.value;
+const etiqueta = origen.value;
+const dadesAfegir = {url: direccio, alias: etiqueta, metode: 'afegir'};
 
 const inputHandler = function(e) {
     var elMeuRegex = /^([a-zA-Z0-9\-_])*$/;
