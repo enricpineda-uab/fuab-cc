@@ -34,7 +34,7 @@ async function enviaDades (url="",dades = {}) {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(dades)
     });
     return await response.json();
 }
