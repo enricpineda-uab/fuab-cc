@@ -3,9 +3,6 @@ const adresa = document.getElementById("url");
 const origen = document.getElementById("tag");
 const aAlias = document.getElementById("alertaAlias");
 const botoEnviar = document.getElementById("botoEnviar");
-var direccio = document.getElementById("url").value;
-var etiqueta = document.getElementById("tag").value;
-const dadesAfegir = {"url": direccio, "alias": etiqueta, "metode": "afegir"};
 
 const inputHandler = function(e) {
     var elMeuRegex = /^([a-zA-Z0-9\-_])*$/;
@@ -22,7 +19,10 @@ const inputHandler = function(e) {
 
 origen.addEventListener('input', inputHandler);
 botoEnviar.addEventListener('click', function(){
-   alert(JSON.stringify(dadesAfegir));
+    var direccio = document.getElementById("url").value;
+    var etiqueta = document.getElementById("tag").value;
+    const dadesAfegir = {"url": direccio, "alias": etiqueta, "metode": "afegir"};
+
     enviaDades("https://fuab.cc/crud.php",dadesAfegir).
     then((response) => {
         console.log(response);
