@@ -17,8 +17,9 @@
             <input type="text" name="url" id="url"><br />
             <p>Pots personalitzar la teva adreça posant un sufix a continuació. Només lletres, números i guions:</p>
             <input type="text" name="tag" id="tag"><br />
-            <p>&nbsp;</p>
-            <p><a href="#" class="boto">Enviar</a></p>
+            <p class="alerta" id="alertaAlias">L'àlies te caràcters no permesos!</p>
+            
+            <p><button type="button" class="boto" id="botoEnviar">Enviar</button></p>
             <p>&nbsp;</p>
             <p class="peu">© Promoció i Comunicació de la FUAB. Podeu contactar a través del correu <a href="mailto: promocio.fuab@uab.cat">promocio.fuab@uab.cat</a></p>
         </form>  
