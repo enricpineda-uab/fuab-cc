@@ -25,7 +25,8 @@ botoEnviar.addEventListener('click', function(){
 
     enviaDades("https://fuab.cc/crud.php",dadesAfegir).
     then((response) => {
-        console.log(response);
+        //console.log(response);
+        document.getElementById("capsula").innerHTML = "<p>Aquesta és la nova adreça curta que has creat:</p><h1>"+response+"</h1>";
     }).catch((error) => {
         console.error("Error: ",error);
     });
