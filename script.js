@@ -22,7 +22,7 @@ const inputHandler = function(e) {
 
 origen.addEventListener('input', inputHandler);
 botoEnviar.addEventListener('click', function(){
-   alert(JSON.stringify(dadesAfegir));
+   alert(etiqueta);
     enviaDades("https://fuab.cc/crud.php",dadesAfegir).
     then((response) => {
         console.log(response);
