@@ -1,13 +1,13 @@
 /* Gestió de l'àlies a l'inici */
-const adresa = document.getElementById("url");
-const origen = document.getElementById("tag");
+const adresa = document.getElementById("url").value;
+const origen = document.getElementById("tag").value;
 const aAlias = document.getElementById("alertaAlias");
 const botoEnviar = document.getElementById("botoEnviar");
-const dadesAfegir = {url: adresa.value, alias: aAlias.value, metode: 'afegir'};
+const dadesAfegir = {url: adresa, alias: origen, metode: 'afegir'};
 
 const inputHandler = function(e) {
     var elMeuRegex = /^([a-zA-Z0-9\-_])*$/;
-    var resultat = elMeuRegex.test(e.target.value);
+    var resultat = elMeuRegex.test(e.target);
     if (resultat === false) {
         aAlias.style.display="block";
         botoEnviar.disabled=true;
