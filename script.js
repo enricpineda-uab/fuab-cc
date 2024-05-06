@@ -47,7 +47,7 @@ botoEnviar.addEventListener('click', function(){
     enviaDades("https://fuab.cc/crud.php",dadesAfegir).
     then((response) => {
         //console.log(response);
-        document.getElementById("capsula").innerHTML = "<p>Aquesta és la nova adreça curta que has creat:</p><p class=\"resultat\"><a href=\""+response+"\">"+response+"</a></p><p><img src=\"qrcode.php?s=qr-q&d="+response+"&w=1000&h=1000\"></p>";
+        document.getElementById("capsula").innerHTML = "<p>Aquesta és la nova adreça curta que has creat:</p><p class=\"resultat\"><a href=\""+response+"\">"+response+"</a></p><p><img src=\"https://api.qrserver.com/v1/create-qr-code/?data="+encodeURI(response)+"&size=500x500\"></p>";
     }).catch((error) => {
         console.error("Error: ",error);
     });
