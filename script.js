@@ -47,7 +47,7 @@ botoEnviar.addEventListener('click', function(){
     enviaDades("https://fuab.cc/crud.php",dadesAfegir).
     then((response) => {
         //console.log(response);
-        document.getElementById("capsula").innerHTML = "<p>Aquesta és la nova adreça curta que has creat:</p><p class=\"resultat\"><a href=\""+response+"\">"+response+"</a></p><p><img src=\"https://api.qrserver.com/v1/create-qr-code/?data="+encodeURI(response)+"&size=500x500\"></p>";
+        document.getElementById("capsula").innerHTML = "<p>Aquesta és la nova adreça curta que has creat:</p><p class=\"resultat\"><a href=\""+response+"\">"+response+"</a></p><p><img src=\"https://api.qrserver.com/v1/create-qr-code/?data="+encodeURI(response)+"&size=200x200\"></p><p><a href=\"https://api.qrserver.com/v1/create-qr-code/?data="+encodeURI(response)+"&format=svg\">Descarrega't el codi QR en format SVG per imprimir</a>";
     }).catch((error) => {
         console.error("Error: ",error);
     });
