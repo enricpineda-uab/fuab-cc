@@ -15,6 +15,8 @@
         <p>Introdueix la URL que vulguis acurtar al camp següent:
         <form>
             <input type="text" name="url" id="url"><br />
+            <p class="alerta" id="alertaURL">La URL no té un format correcte!</p>
+
             <p>Pots personalitzar la teva adreça posant un sufix a continuació. Només lletres, números i guions:</p>
             <input type="text" name="tag" id="tag"><br />
             <p class="alerta" id="alertaAlias">L'àlies te caràcters no permesos!</p>

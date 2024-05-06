@@ -2,6 +2,7 @@
 const adresa = document.getElementById("url");
 const origen = document.getElementById("tag");
 const aAlias = document.getElementById("alertaAlias");
+const aURL = document.getElementById("alertaURL");
 const botoEnviar = document.getElementById("botoEnviar");
 
 const inputHandler = function(e) {
@@ -16,8 +17,28 @@ const inputHandler = function(e) {
     }
 }
 
+const isValidHttpUrl= function(str) {
+    const pattern = new RegExp(
+      '^(https?:\\/\\/)?' + // protocol
+        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+        '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+        '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+        '(\\#[-a-z\\d_]*)?$', // fragment locator
+      'i'
+    );
+    var resulto = pattern.test(str.target.value);
+    if (resulto === false) {
+        aURL.style.display="block";
+        botoEnviar.disabled=true;
+    } else {
+        aURL.style.display="none";
+        botoEnviar.disabled=false;
+    }
+  }
 
 origen.addEventListener('input', inputHandler);
+adresa.addEventListener('blur', isValidHttpUrl);
 botoEnviar.addEventListener('click', function(){
     var direccio = document.getElementById("url").value;
     var etiqueta = document.getElementById("tag").value;
@@ -43,3 +64,4 @@ async function enviaDades (url="",dades = {}) {
     });
     return await response.json();
 }
+
