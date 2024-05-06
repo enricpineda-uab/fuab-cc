@@ -53,11 +53,16 @@ input {
 }
 
 .resultat {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 100;
 }
 
 #logofuab {
     width: 200px;
     height: auto;
+}
+
+a, a:visited, a:hover {
+    color: #009900;
+    text-decoration: none;
 }
