@@ -11,6 +11,8 @@ $query = "select url from adreces where id='$c'";
 }
 $result = pg_query($db,$query);
 $desti = pg_fetch_row($result,0);
+$avui = date("Y-m-d");
+$result2 = pg_query($db,"insert into log ('idurl','data') values ('".$desti[0]."','".$avui."')");
 //echo $desti[0];
 pg_close($db);
 header("Location: ".$desti[0]);
