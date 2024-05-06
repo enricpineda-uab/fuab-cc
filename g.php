@@ -14,6 +14,7 @@ $desti = pg_fetch_row($result,0);
 $avui = date("Y-m-d");
 $result2 = pg_query($db,"INSERT INTO log (idurl,dataconsulta) VALUES ('".$desti[0]."','".$avui."')");
 //echo $desti[0];
+if (!$result2) {echo "NO ho he executat";}
 pg_close($db);
-header("Location: ".$desti[0]);
+//header("Location: ".$desti[0]);
 ?>
