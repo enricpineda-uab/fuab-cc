@@ -11,7 +11,7 @@
   <body>
     <main>
       <div id="capsula">
-        <img src="img/logo-fuab.png" />
+        <img src="img/logo-fuab.png" id="logofuab"/>
         <h1>Acurtador web FUAB</h1>
         <p>Introdueix la URL que vulguis acurtar al camp següent:
         <form>
