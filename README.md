@@ -7,3 +7,6 @@ Aquest és un acurtador d'adreces per a ús intern de la FUAB, ideal per acurtar
 
 ## Llicència
 Aquest software està sota llicència GNU.
+
+## Control de versions
+* 0.5: Versió inicial

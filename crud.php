@@ -7,6 +7,9 @@ switch ($dades->metode) {
     case "afegir":
         $ordre = "INSERT INTO adreces (url,alias) values ('".$dades->url."','".$dades->alias."') RETURNING id";
         break;
+    case "editar":
+        $ordre = "UPDATE adreces SET url='".$dades->url."', alias='".$dades->alias."' where id='".$dades->id."'";
+        break;
 }
 
 $db = pg_connect("host=localhost dbname=fuabcc user=fuabcc password=15Maig1977!");
