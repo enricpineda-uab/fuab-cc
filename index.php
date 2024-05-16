@@ -24,9 +24,8 @@
             
             <p><button type="button" class="boto" id="botoEnviar">Enviar</button></p>
             <p>&nbsp;</p>
-            <p class="peu">© Promoció i Comunicació de la FUAB. Podeu contactar a través del correu <a href="mailto: promocio.fuab@uab.cat">promocio.fuab@uab.cat</a></p>
-            <p class="peu">Versió 0.5 | <a href="https://github.com/enricpineda-uab/fuab-cc">Codi font disponible sota llicència GNU a Github.</p>
         </form>  
+        <?php include("peu.html");?>
       </div>
     </main>
 	<script src="./script.js"></script>

@@ -40,6 +40,7 @@ $desti = pg_fetch_row($result,0);
             <td><?php echo $fila[1];?></td>
         <?php } ?>
         </table>
+        <?php include("peu.html");?>
       </div>
     </main>
 	<script src="./script.js"></script>
