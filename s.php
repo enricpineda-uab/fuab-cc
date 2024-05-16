@@ -17,15 +17,15 @@ $desti = pg_fetch_row($result,0);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FUAB.CC - Escurçador web de la FUAB</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
   <body>
     <main>
       <div id="capsula">
-        <img src="img/logo-fuab.png" id="logofuab"/>
+        <img src="/img/logo-fuab.png" id="logofuab"/>
         <h1>Escurçador web FUAB</h1>
-        <p>Dades estadístiques de l'adreça <strong>https://fuab.cc/<?php echo $c;?></strong>:
+        <p>Dades estadístiques de l'adreça <strong>https://fuab.cc/<?php echo $c;?>/</strong>:
         <table>
             <tr>
                 <th>Dia</th>
