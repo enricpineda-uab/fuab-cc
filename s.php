@@ -26,7 +26,7 @@ $desti = pg_fetch_row($result,0);
         <img src="/img/logo-fuab.png" id="logofuab"/>
         <h1>Escurçador web FUAB</h1>
         <p>Dades estadístiques de l'adreça <strong>https://fuab.cc/<?php echo $c;?>/</strong>:
-        <table>
+        <table class="taulaResultats">
             <tr>
                 <th>Dia</th>
                 <th>Nombre de clicks</th>

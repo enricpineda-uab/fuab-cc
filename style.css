@@ -66,3 +66,8 @@ a, a:visited, a:hover {
     color: #009900;
     text-decoration: none;
 }
+
+.taulaResultats {
+    width: 50%;
+    margin: 0px auto;
+}
