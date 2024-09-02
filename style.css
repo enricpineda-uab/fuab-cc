@@ -1,7 +1,10 @@
+html {
+    height: 100%;
+}
 body {
     font-family: Arial, Helvetica, sans-serif; 
     background-image: url(img/fons.webp); 
-    background-position: top left; 
+    background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
     width: 100%;
@@ -71,3 +74,7 @@ a, a:visited, a:hover {
     width: 50%;
     margin: 0px auto;
 }
+
+@media only screen and (max-width: 600px) {
+    #capsula {width: 75vw;}
+} 
