@@ -9,5 +9,6 @@ Aquest és un acurtador d'adreces per a ús intern de la FUAB, ideal per acurtar
 Aquest software està sota llicència GNU.
 
 ## Control de versions
-* 0.6: inclusió del mòdul estadístic, canvis en el peu d eles pàgines, i canvi de nom a "Escurçador FUAB"
-* 0.5: Versió inicial
+* v0.6.1: millores en la visualització de la web per a mòbils
+* v0.6: inclusió del mòdul estadístic, canvis en el peu de les pàgines, i canvi de nom a "Escurçador FUAB"
+* v0.5: Versió inicial
