@@ -4,6 +4,7 @@ const origen = document.getElementById("tag");
 const aAlias = document.getElementById("alertaAlias");
 const aURL = document.getElementById("alertaURL");
 const botoEnviar = document.getElementById("botoEnviar");
+const formShortener = document.getElementById("formcreador");
 
 const inputHandler = function(e) {
     var elMeuRegex = /^([a-zA-Z0-9\-_])*$/;
@@ -39,7 +40,8 @@ const isValidHttpUrl= function(str) {
 
 origen.addEventListener('input', inputHandler);
 adresa.addEventListener('blur', isValidHttpUrl);
-botoEnviar.addEventListener('click', function(){
+formShortener.addEventListener('submit', function(e){
+    e.preventDefault();
     var direccio = document.getElementById("url").value;
     var etiqueta = document.getElementById("tag").value;
     const dadesAfegir = {"url": direccio, "alias": etiqueta, "metode": "afegir"};
