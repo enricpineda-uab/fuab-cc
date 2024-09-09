@@ -40,8 +40,7 @@ const isValidHttpUrl= function(str) {
 
 origen.addEventListener('input', inputHandler);
 adresa.addEventListener('blur', isValidHttpUrl);
-formShortener.addEventListener('submit', function(e){
-    e.preventDefault();
+botoEnviar.addEventListener('submit', function(){
     var direccio = document.getElementById("url").value;
     var etiqueta = document.getElementById("tag").value;
     const dadesAfegir = {"url": direccio, "alias": etiqueta, "metode": "afegir"};

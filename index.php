@@ -14,7 +14,7 @@
         <img src="img/logo-fuab.png" id="logofuab"/>
         <h1>Escurçador web FUAB</h1>
         <p>Introdueix la URL que vulguis acurtar al camp següent:
-        <form id="formcreador">
+        <form>
             <input type="text" name="url" id="url"><br />
             <p class="alerta" id="alertaURL">La URL no té un format correcte!</p>
 
@@ -22,7 +22,7 @@
             <input type="text" name="tag" id="tag"><br />
             <p class="alerta" id="alertaAlias">L'àlies te caràcters no permesos!</p>
             
-            <p><input type="submit" class="boto" id="botoEnviar">Enviar</button></p>
+            <p><button type="button" class="boto" id="botoEnviar">Enviar</button></p>
             <p>&nbsp;</p>
         </form>  
         <?php include("peu.html");?>
