@@ -1,3 +1,12 @@
+<?php
+require_once 'cas-config.php';
+require_once $phpcas_path . '/CAS.php';
+phpCAS::setVerbose(true);
+phpCAS::client(CAS_VERSION_2_0, $cas_host, $cas_port, $cas_context, TRUE);
+phpCAS::setNoCasServerValidation();
+phpCAS::forceAuthentication();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,7 +22,7 @@
       <div id="capsula">
         <img src="img/logo-fuab.png" id="logofuab"/>
         <h1>Escurçador web FUAB</h1>
-        <p>Introdueix la URL que vulguis acurtar al camp següent:
+        <p>Hola, <?php echo phpCAS::getUser(); ?>! Introdueix la URL que vulguis acurtar al camp següent:
         <form>
             <input type="text" name="url" id="url"><br />
             <p class="alerta" id="alertaURL">La URL no té un format correcte!</p>
