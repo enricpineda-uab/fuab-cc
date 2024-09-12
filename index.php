@@ -1,12 +1,3 @@
-<?php
-require_once 'cas-config.php';
-require_once $phpcas_path . '/CAS.php';
-phpCAS::setVerbose(true);
-phpCAS::client(CAS_VERSION_2_0, $cas_host, $cas_port, $cas_context, TRUE);
-phpCAS::setNoCasServerValidation();
-phpCAS::forceAuthentication();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
