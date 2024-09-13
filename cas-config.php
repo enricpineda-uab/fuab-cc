@@ -17,14 +17,14 @@
  * @link     https://wiki.jasig.org/display/CASC/phpCAS
  */
 
-$phpcas_path = 'source';
+$phpcas_path = './';
 
 ///////////////////////////////////////
 // Basic Config of the phpCAS client //
 ///////////////////////////////////////
 
 // Full Hostname of your CAS Server
-$cas_host = 'sso.uab.cat';
+$cas_host = 'ssot.uab.cat';
 
 // Context of the CAS Server
 $cas_context = '/cas';
@@ -47,7 +47,7 @@ $cas_real_hosts = array('cas-real-1.example.com', 'cas-real-2.example.com');
 $client_service_name = 'https://www.fuab.cc';
 
 // Client config for cookie hardening
-$client_domain = 'https://www.fuab.cc';
+$client_domain = '127.0.0.1';
 $client_path = 'phpcas';
 $client_secure = true;
 $client_httpOnly = true;
