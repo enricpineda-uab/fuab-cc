@@ -9,7 +9,8 @@ Aquest és un acurtador d'adreces per a ús intern de la FUAB, ideal per acurtar
 Aquest software està sota llicència GNU.
 
 ## Control de versions
-* v0.7: Introducció de SSO via CAS
+* v0.7.1: Esmenat problema amb la Same-Origin Policy del CRUD 
+* v0.7.0: Introducció de SSO via CAS
 * v0.6.1: millores en la visualització de la web per a mòbils
-* v0.6: inclusió del mòdul estadístic, canvis en el peu de les pàgines, i canvi de nom a "Escurçador FUAB"
-* v0.5: Versió inicial
+* v0.6.0: inclusió del mòdul estadístic, canvis en el peu de les pàgines, i canvi de nom a "Escurçador FUAB"
+* v0.5.0: Versió inicial
