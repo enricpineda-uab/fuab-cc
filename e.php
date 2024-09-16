@@ -69,6 +69,16 @@ $desti = pg_fetch_row($result,0);
     <title>FUAB.CC - Escurçador web de la FUAB</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    
+<?php
+ 
+ $protocol = isset($_SERVER['HTTPS']) && 
+ $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
+ $base_url = $protocol . $_SERVER['HTTP_HOST'] . '/';
+  
+
+ ?>
+<base href="<?php echo $base_url;?>"> 
   </head>
   <body>
     <main>
