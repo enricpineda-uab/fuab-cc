@@ -1,6 +1,7 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+include "f.php";
 $c = $_GET['c'];
 //$id = $_GET['id'];
 $db = pg_connect("host=localhost dbname=fuabcc user=fuabcc password=15Maig1977!");

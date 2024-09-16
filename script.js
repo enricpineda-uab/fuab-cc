@@ -50,7 +50,7 @@ botoEnviar.addEventListener('click', function(){
     if (metode == "afegir") {
         dadesAfegir = {"url": direccio, "alias": etiqueta, "metode": "afegir"};    
     } else {
-        dadesAfegir = {"id": idRecurs, "url": direccio, "alias": etiqueta, "metode": "modificar"};
+        dadesAfegir = {"id": idRecurs.value, "url": direccio, "alias": etiqueta, "metode": "modificar"};
     }
     
 
