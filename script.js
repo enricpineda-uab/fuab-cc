@@ -6,9 +6,8 @@ const aURL = document.getElementById("alertaURL");
 const botoEnviar = document.getElementById("botoEnviar");
 const formShortener = document.getElementById("formcreador");
 const metode = document.getElementById("metode");
-if (metode == "modificar") {
-    const idRecurs = document.getElementById("id");
-}
+const idRecurs = document.getElementById("id");
+
 
 const inputHandler = function(e) {
     var elMeuRegex = /^([a-zA-Z0-9\-_])*$/;
