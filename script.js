@@ -5,8 +5,8 @@ const aAlias = document.getElementById("alertaAlias");
 const aURL = document.getElementById("alertaURL");
 const botoEnviar = document.getElementById("botoEnviar");
 const formShortener = document.getElementById("formcreador");
-const metode = document.getElementById("metode");
-const idRecurs = document.getElementById("id");
+metode = document.getElementById("metode");
+idRecurs = document.getElementById("id");
 
 
 const inputHandler = function(e) {

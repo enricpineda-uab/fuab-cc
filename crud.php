@@ -1,5 +1,5 @@
 <?php
-include "f.php";
+include 'f.php';
 // Agafem les dades
 $json = file_get_contents('php://input');
 $dades = json_decode($json);
