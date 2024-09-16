@@ -48,9 +48,9 @@ botoEnviar.addEventListener('click', function(){
     var direccio = document.getElementById("url").value;
     var etiqueta = document.getElementById("tag").value;
     if (metode == "afegir") {
-        const dadesAfegir = {"url": direccio, "alias": etiqueta, "metode": "afegir"};    
+        dadesAfegir = {"url": direccio, "alias": etiqueta, "metode": "afegir"};    
     } else {
-        const dadesAfegir = {"id": idRecurs, "url": direccio, "alias": etiqueta, "metode": "modificar"};
+        dadesAfegir = {"id": idRecurs, "url": direccio, "alias": etiqueta, "metode": "modificar"};
     }
     
 
