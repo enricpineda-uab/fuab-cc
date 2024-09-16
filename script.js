@@ -5,6 +5,10 @@ const aAlias = document.getElementById("alertaAlias");
 const aURL = document.getElementById("alertaURL");
 const botoEnviar = document.getElementById("botoEnviar");
 const formShortener = document.getElementById("formcreador");
+const metode = document.getElementById("metode");
+if (metode == "modificar") {
+    const idRecurs = document.getElementById("id");
+}
 
 const inputHandler = function(e) {
     var elMeuRegex = /^([a-zA-Z0-9\-_])*$/;
@@ -40,10 +44,16 @@ const isValidHttpUrl= function(str) {
 
 origen.addEventListener('input', inputHandler);
 adresa.addEventListener('blur', isValidHttpUrl);
+
 botoEnviar.addEventListener('click', function(){
     var direccio = document.getElementById("url").value;
     var etiqueta = document.getElementById("tag").value;
-    const dadesAfegir = {"url": direccio, "alias": etiqueta, "metode": "afegir"};
+    if (metode == "afegir") {
+        const dadesAfegir = {"url": direccio, "alias": etiqueta, "metode": "afegir"};    
+    } else {
+        const dadesAfegir = {"id": idRecurs, "url": direccio, "alias": etiqueta, "metode": "modificar"};
+    }
+    
 
     enviaDades("crud.php",dadesAfegir).
     then((response) => {

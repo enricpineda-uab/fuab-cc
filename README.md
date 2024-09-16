@@ -1,5 +1,5 @@
 # FUAB.CC, un acurtador d'adreces per a la FUAB
-Aquest és un acurtador d'adreces per a ús intern de la FUAB, ideal per acurtar adreces llargues de la web de la FUAB per enviar per xarxes socials, crear codis QR, etc.
+Aquest és un acurtador d'adreces per a ús intern de la FUAB, ideal per acurtar adreces llargues de la web de la FUAB per enviar per xarxes socials, crear codis QR, etc. Inclou la llibreria phpCAS de @apereo per la gestió del SSO amb la UAB.
 
 ## Requeriments
 - PHP 7 o superior
@@ -9,6 +9,7 @@ Aquest és un acurtador d'adreces per a ús intern de la FUAB, ideal per acurtar
 Aquest software està sota llicència GNU.
 
 ## Control de versions
+* v1.0.0: Afegit el mòdul d'edició d'enllaços.
 * v0.7.1: Esmenat problema amb la Same-Origin Policy del CRUD 
 * v0.7.0: Introducció de SSO via CAS
 * v0.6.1: millores en la visualització de la web per a mòbils

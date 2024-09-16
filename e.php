@@ -48,8 +48,17 @@ phpCAS::handleLogoutRequests();
 
 // force CAS authentication
 phpCAS::forceAuthentication();
-
-// for this test, simply print that the authentication was successfull
+include "f.php";
+$c = $_GET['c'];
+//$id = $_GET['id'];
+$db = connectaDB();
+if (ctype_digit($c)=== true){
+$query = "select id,url,alias from adreces where id='$c'";
+} else {
+    $query = "select id,url,alias from adreces where alias='$c'";
+}
+$result = pg_query($db,$query);
+$desti = pg_fetch_row($result,0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,13 +77,14 @@ phpCAS::forceAuthentication();
         <h1>Escurçador web FUAB</h1>
         <p>Hola, <?php echo phpCAS::getUser(); ?>! Introdueix la URL que vulguis acurtar al camp següent:
         <form>
-            <input type="text" name="url" id="url"><br />
+            <input type="text" name="url" id="url" value="<?php echo $desti[1];?>"><br />
             <p class="alerta" id="alertaURL">La URL no té un format correcte!</p>
 
             <p>Pots personalitzar la teva adreça posant un sufix a continuació. Només lletres, números i guions:</p>
-            <input type="text" name="tag" id="tag"><br />
+            <input type="text" name="tag" id="tag" value="<?php echo $desti[2];?>"><br />
             <p class="alerta" id="alertaAlias">L'àlies te caràcters no permesos!</p>
-            <input type="hidden" id="metode" value="afegir">
+            <input type="hidden" id="id" name="id" value="<?php echo $desti[0];?>">
+            <input type="hidden" id="metode" value="modificar">
             <p><button type="button" class="boto" id="botoEnviar">Enviar</button></p>
             <p>&nbsp;</p>
         </form>  

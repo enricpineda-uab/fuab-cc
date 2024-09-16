@@ -1,4 +1,5 @@
 <?php
+include "f.php";
 // Agafem les dades
 $json = file_get_contents('php://input');
 $dades = json_decode($json);
@@ -7,12 +8,12 @@ switch ($dades->metode) {
     case "afegir":
         $ordre = "INSERT INTO adreces (url,alias) values ('".$dades->url."','".$dades->alias."') RETURNING id";
         break;
-    case "editar":
-        $ordre = "UPDATE adreces SET url='".$dades->url."', alias='".$dades->alias."' where id='".$dades->id."'";
+    case "modificar":
+        $ordre = "UPDATE adreces SET url='".$dades->url."', alias='".$dades->alias."' where id='".$dades->id."' RETURNING id";
         break;
 }
 
-$db = pg_connect("host=localhost dbname=fuabcc user=fuabcc password=15Maig1977!");
+$db = connectaDB();
 $result = pg_query($db,$ordre);
 $desti = pg_fetch_row($result,0);
 if ($dades->alias != "") {
