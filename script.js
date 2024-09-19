@@ -5,8 +5,6 @@ const aAlias = document.getElementById("alertaAlias");
 const aURL = document.getElementById("alertaURL");
 const botoEnviar = document.getElementById("botoEnviar");
 const formShortener = document.getElementById("formcreador");
-metode = document.getElementById("metode");
-idRecurs = document.getElementById("id");
 
 
 const inputHandler = function(e) {
@@ -47,10 +45,14 @@ adresa.addEventListener('blur', isValidHttpUrl);
 botoEnviar.addEventListener('click', function(){
     var direccio = document.getElementById("url").value;
     var etiqueta = document.getElementById("tag").value;
+    metode = document.getElementById("metode").value;
+    idRecurs = document.getElementById("id").value;
+
+
     if (metode == "afegir") {
         dadesAfegir = {"url": direccio, "alias": etiqueta, "metode": "afegir"};    
     } else {
-        dadesAfegir = {"id": idRecurs.value, "url": direccio, "alias": etiqueta, "metode": "modificar"};
+        dadesAfegir = {"id": idRecurs, "url": direccio, "alias": etiqueta, "metode": "modificar"};
     }
     
 
