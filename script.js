@@ -59,7 +59,7 @@ botoEnviar.addEventListener('click', function(){
     enviaDades("crud.php",dadesAfegir).
     then((response) => {
         //console.log(response);
-        document.getElementById("capsula").innerHTML = "<p>Aquesta és la nova adreça curta que has creat:</p><p class=\"resultat\"><a href=\""+response+"\">"+response+"</a></p><p><img src=\"https://api.qrserver.com/v1/create-qr-code/?data="+encodeURI(response)+"&size=200x200\"></p><p><a href=\"https://api.qrserver.com/v1/create-qr-code/?data="+encodeURI(response)+"&format=svg\">Descarrega't el codi QR en format SVG per imprimir</a></p><p><a href=\"#\" onClick=\"javascript: location.reload();\"><strong>Fes una altra adreça curta.</strong></a></p>";
+        document.getElementById("capsula").innerHTML = "<p>Aquesta és la nova adreça curta que has creat:</p><p class=\"resultat\"><a href=\""+response+"\">"+response+"</a></p><p><img src=\"https://api.qrserver.com/v1/create-qr-code/?data="+encodeURI(response)+"&size=200x200\"></p><p><a href=\"https://api.qrserver.com/v1/create-qr-code/?data="+encodeURI(response)+"&format=svg\" target=\"_blank\">Descarrega't el codi QR en format SVG per imprimir</a></p><p><a href=\"#\" onClick=\"javascript: location.reload();\"><strong>Fes una altra adreça curta.</strong></a></p>";
     }).catch((error) => {
         console.error("Error: ",error);
     });
