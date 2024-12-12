@@ -64,9 +64,10 @@ phpCAS::forceAuthentication();
   <body>
     <main>
       <div id="capsula">
+        <div class="barralogin">Hola, <?php echo phpCAS::getUser(); ?></div>
         <img src="img/logo-fuab.png" id="logofuab"/>
         <h1>Escurçador web FUAB</h1>
-        <p>Hola, <?php echo phpCAS::getUser(); ?>! Introdueix la URL que vulguis acurtar al camp següent:
+        <p>Introdueix la URL que vulguis acurtar al camp següent:
         <form>
             <input type="text" name="url" id="url"><br />
             <p class="alerta" id="alertaURL">La URL no té un format correcte!</p>
