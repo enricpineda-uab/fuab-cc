@@ -9,6 +9,7 @@ Aquest és un acurtador d'adreces per a ús intern de la FUAB, ideal per acurtar
 Aquest software està sota llicència GNU.
 
 ## Control de versions
+* v2.0.0: Canvi de la base de dades a SQLite3
 * v1.0.5: La informació d'usuari logat apareix ara en una barra verda a sobre del logo. Primer pas cap a la secció d'usuari.
 * v1.0.4: afegit un target a l'enllaç que mostra el codi QR perquè s'obri en una nova pestanya
 * v1.0.3: Correcció d'errors de Javascript
